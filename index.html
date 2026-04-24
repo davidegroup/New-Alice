@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>愛麗絲系統</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="Alice/AliceCss.css">
+</head>
+<body>
+
+    <!-- 音樂控制面板 -->
+    <div class="music-controls">
+        <button id="music-toggle-btn" onclick="toggleMusic()">♪</button>
+        <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.5" oninput="updateVolume(this.value)">
+    </div>
+   
+    <div class="container">
+        <div class="title">請選擇一個愛麗絲:</div>
+   
+        <!-- 天童愛麗絲 -->
+        <div class="text-blue">
+            <button class="alice-button text-blue" onclick="toggleAlice('div01')">天童愛麗絲</button>
+        </div>
+        <div id="div01" class="picture-container">
+            <img src="./AliceSource/__aris_blue_archive_drawn_by_doremi_doremi4704__a3a51a2670e906aaa30a0dd7927abb56.png" alt="天童愛麗絲">
+        </div>
+   
+        <!-- 橘愛麗絲 -->
+        <div class="text-blue">
+            <button class="alice-button text-blue" onclick="toggleAlice('div02')">橘愛麗絲</button>
+        </div>
+        <div id="div02" class="picture-container">
+            <img src="./AliceSource/Arisu_SS_SSR+.png" alt="橘愛麗絲">
+        </div>
+   
+        <!-- 愛麗絲．瑪格特洛伊德 -->
+        <div class="text-blue">
+            <button class="alice-button text-blue" onclick="toggleAlice('div03')">愛麗絲．瑪格特洛伊德</button>
+        </div>
+        <div id="div03" class="picture-container">
+            <img src="./AliceSource/爱丽丝·玛格特洛依德（妖妖梦Result立绘）.jpg" alt="愛麗絲．瑪格特洛伊德">
+        </div>
+
+        <!-- 四葉愛麗絲 -->
+        <div class="text-blue">
+            <button class="alice-button text-blue" onclick="toggleAlice('div05')">四葉愛麗絲</button>
+        </div>
+        <div id="div05" class="picture-container">
+            <img src="./AliceSource/b96qxgow.png" alt="四葉愛麗絲">
+        </div>
+
+        <!-- 御金賀愛麗絲 -->
+        <div class="text-blue">
+            <button class="alice-button text-blue" onclick="toggleAlice('div06')">御金賀愛麗絲</button>
+        </div>
+        <div id="div06" class="picture-container">
+            <img src="./AliceSource/alice-okanega-684e4714244a5p.jpg" alt="御金賀愛麗絲">
+        </div>
+   
+        <!-- [X] 秘密按鈕 -->
+        <div class="text-red">
+            <button class="secret-button" onclick="toggleSecret()">[X]</button>
+        </div>
+   
+        <!-- 愛麗絲．里德爾區塊 -->
+        <div id="liddell-section" class="liddell-main-btn">
+            <div class="text-red">
+                <button class="alice-button text-red" onclick="toggleLiddell()">愛麗絲．里德爾</button>
+            </div>
+            
+            <div id="div04" class="picture-container" style="flex-direction: column; align-items: center;">
+                <button onclick="checkLiddellEasterEgg()" style="background:none; border:none; padding:0; cursor:pointer;">
+                    <img id="liddell-img" src="./AliceSource/里德爾.png" alt="愛麗絲．里德爾">
+                </button>
+   
+                <div id="liddell-controls" style="margin-top: 20px;">
+                    <button class="mui-like-button" onclick="toggleLiddellState()">
+                        <span id="text01" style="color:black">我等這一刻很久了，</span>
+                        <span id="text02" style="color:red">蠕動潛行者</span>
+                    </button>
+                </div>
+                <div id="not-alice-text" class="not-alice" style="display:none;">......我不是愛麗絲</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 背景音樂控制 -->
+    <audio id="bg-music" loop>
+        <source src="./AliceSource/貝多芬 Ludwig van Beethoven 給愛麗絲 Für Elise 鋼琴教學 Synthesia 琴譜 - LouisLiao Synthesia 教學影片 (youtube).mp3" type="audio/mpeg">
+        您的瀏覽器不支援音訊標籤。
+    </audio>
+   
+    <script src="Alice/AliceJs.js"></script>
+   
+</body>
+</html>

@@ -1,0 +1,139 @@
+body {
+    /* 背景圖片路徑引用自 test1 的資源 */
+    background-image: url("../AliceSource/816d48b54aa0329c4c941b8c19b44305.png");
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.container {
+    background-color: rgba(192, 192, 192, 0.9);
+    padding: 20px;
+    width: 65%;
+    margin: auto;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.title {
+    font-size: 3rem;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.text-blue {
+    color: blue;
+    margin: 15px 0;
+}
+
+.text-red {
+    color: red;
+    margin: 15px 0;
+}
+
+.alice-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 3.75rem; /* 6xl */
+    padding: 0;
+}
+
+.alice-button:hover {
+    opacity: 0.8;
+}
+
+.secret-button {
+    font-size: 2.25rem; /* 4xl */
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: red;
+}
+
+.picture-container {
+    display: none;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.picture-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.liddell-main-btn {
+    display: none;
+    margin-top: 20px;
+}
+
+.mui-like-button {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.875rem; /* 3xl */
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    margin: 10px 0;
+}
+
+.mui-like-button:hover {
+    background-color: #f5f5f5;
+}
+
+.not-alice {
+    font-size: 3rem; /* 5xl */
+    color: red;
+}
+
+/* 音樂控制面板樣式 */
+.music-controls {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.music-controls:hover {
+    background: rgba(255, 255, 255, 1);
+}
+
+#music-toggle-btn {
+    background: #000;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    transition: transform 0.2s;
+}
+
+#music-toggle-btn:active {
+    transform: scale(0.9);
+}
+
+#volume-slider {
+    width: 80px;
+    cursor: pointer;
+    accent-color: #000;
+}
